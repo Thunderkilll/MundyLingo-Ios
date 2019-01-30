@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="egy-3r-ihQ">
-                                <rect key="frame" x="50" y="185" width="274" height="251"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoproject" translatesAutoresizingMaskIntoConstraints="NO" id="6UE-vK-aUv">
+                                <rect key="frame" x="33" y="137" width="308" height="379"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.1308260192" blue="0.24610445929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.214841080299363" blue="0.44787176724137934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egy-3r-ihQ" secondAttribute="trailing" constant="51" id="DBg-1h-iXU"/>
-                            <constraint firstItem="egy-3r-ihQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="E6c-aA-oCC"/>
-                            <constraint firstItem="egy-3r-ihQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Kb6-5X-Fa6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="egy-3r-ihQ" secondAttribute="bottom" constant="231" id="msP-2j-hvZ"/>
+                            <constraint firstItem="6UE-vK-aUv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="3Gy-iG-NZN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6UE-vK-aUv" secondAttribute="bottom" constant="151" id="J5C-BS-j2w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6UE-vK-aUv" secondAttribute="trailing" constant="34" id="PDG-FO-Cjn"/>
+                            <constraint firstItem="6UE-vK-aUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="QMv-VB-8dh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="128" height="132"/>
+        <image name="logoproject" width="1280" height="1280"/>
     </resources>
 </document>

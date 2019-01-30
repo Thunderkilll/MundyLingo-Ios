@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u7S-4E-jwz">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,12 +22,33 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" title="SignIn" id="BYZ-38-t0r" customClass="ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kki-C8-zJq" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="98" y="597" width="192" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLayout2" translatesAutoresizingMaskIntoConstraints="NO" id="2pp-mj-wR3">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ1-vH-qFq" customClass="versHome">
+                                <rect key="frame" x="26" y="610" width="30" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="9ff-kA-vFf"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnLoginWithFacebookTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9H-jl-S8X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbQ-Vv-YKk">
+                                <rect key="frame" x="85" y="608" width="30" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KDj-PY-W1T"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="signinMail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nza-Pf-zDE"/>
+                                    <segue destination="keo-Ve-xtM" kind="show" identifier="idSegueContent" id="GtL-3M-FAh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kki-C8-zJq" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
+                                <rect key="frame" x="324" y="597" width="70" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="offline">
                                     <color key="titleColor" red="1" green="0.0099468241870000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,68 +98,26 @@
                                     <segue destination="keo-Ve-xtM" kind="show" id="ws2-PY-VkL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To learn Languages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGI-ea-9eI" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="38.349755112579444" y="281.50150755493178" width="312.30048977484114" height="55.496984890136446"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="StarJediSpecialEdition" family="StarJedi Special Edition" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rotationAngle">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ1-vH-qFq" customClass="versHome">
-                                <rect key="frame" x="189" y="515" width="24" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="dashboard"/>
-                                <connections>
-                                    <action selector="btnLoginWithFacebookTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9H-jl-S8X"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LnK-jU-PAq" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="93" y="113" width="211" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="150"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A new fashion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHV-6Q-vDl" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="88" y="130" width="261.67406453433415" height="143.49900033960284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="StarJediSpecialEdition" family="StarJedi Special Edition" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rotationAngle">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="-2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbQ-Vv-YKk">
-                                <rect key="frame" x="112" y="428" width="192" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="loginMail" image="mail"/>
-                                <connections>
-                                    <action selector="signinMail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nza-Pf-zDE"/>
-                                    <segue destination="keo-Ve-xtM" kind="show" identifier="idSegueContent" id="GtL-3M-FAh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.81366950449999997" blue="0.2500071854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2pp-mj-wR3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="06s-EF-84T"/>
+                            <constraint firstItem="2pp-mj-wR3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7gH-gR-1hB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kki-C8-zJq" secondAttribute="trailing" constant="20" id="7sx-mS-zRN"/>
+                            <constraint firstItem="lbQ-Vv-YKk" firstAttribute="leading" secondItem="OQ1-vH-qFq" secondAttribute="trailing" constant="29" id="8BK-Fy-E1n"/>
+                            <constraint firstItem="2pp-mj-wR3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cys-B4-X1n"/>
+                            <constraint firstItem="lbQ-Vv-YKk" firstAttribute="leading" secondItem="OQ1-vH-qFq" secondAttribute="trailing" constant="29" id="HLH-3P-09Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lbQ-Vv-YKk" secondAttribute="bottom" constant="94" id="J8P-dh-Dl8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kki-C8-zJq" secondAttribute="bottom" constant="100" id="Q5G-5X-iNx"/>
+                            <constraint firstItem="2pp-mj-wR3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wy3-py-WNl"/>
+                            <constraint firstItem="lbQ-Vv-YKk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="544" id="XG4-7X-eat"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OQ1-vH-qFq" secondAttribute="bottom" constant="92" id="YSE-gS-FqP"/>
+                            <constraint firstItem="OQ1-vH-qFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="546" id="cF9-DF-1C3"/>
+                            <constraint firstItem="Kki-C8-zJq" firstAttribute="leading" secondItem="lbQ-Vv-YKk" secondAttribute="trailing" constant="209" id="jcq-Q4-hiO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pp-mj-wR3" secondAttribute="trailing" id="kWc-th-pnb"/>
+                            <constraint firstItem="OQ1-vH-qFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="lk0-Om-kYx"/>
+                            <constraint firstItem="Kki-C8-zJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="533" id="ops-Pa-tqT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="WELCOME" id="a5S-4X-Os8" colorLabel="IBBuiltInLabel-Green">
@@ -150,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="167.76611694152925"/>
+            <point key="canvasLocation" x="-1404.3478260869567" y="167.11956521739131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DIa-u2-KZt">
@@ -158,7 +137,7 @@
                 <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="u7S-4E-jwz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jos-ai-crh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -179,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krc-ku-SsH">
-                                <rect key="frame" x="0.0" y="88" width="420" height="1329"/>
+                                <rect key="frame" x="0.0" y="64" width="420" height="1387"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inr-yq-Fbs">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="1500"/>
@@ -224,7 +203,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celu" id="fff-wy-0pV" customClass="MyFirstCollectionViewCell" customModule="monMiniProjet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="20.5" width="113" height="120"/>
+                                                        <rect key="frame" x="0.0" y="20.666666666666668" width="113" height="120"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="113" height="120"/>
@@ -308,7 +287,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell3" id="aM4-Mn-Mrj" customClass="therCollectionViewCell" customModule="monMiniProjet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="7.5" width="108" height="130"/>
+                                                        <rect key="frame" x="0.0" y="7.666666666666667" width="108" height="130"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="108" height="130"/>
@@ -428,11 +407,11 @@
             <objects>
                 <viewController id="bJw-zP-aWq" customClass="CourPrefsViewCellViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0LZ-VW-F2W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="167" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-fT-lyK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.82745098039999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.82745098039999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -440,11 +419,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kgl-2p-4w9" id="kW9-cO-NHO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="166.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE COUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h38-1y-iAu" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                                    <rect key="frame" x="-1" y="64" width="1024" height="45"/>
+                                                    <rect key="frame" x="-1" y="64" width="375" height="45"/>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -466,7 +445,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-AE-1br" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                                    <rect key="frame" x="-1" y="25" width="1024" height="45"/>
+                                                    <rect key="frame" x="-1" y="25" width="375" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="N39-LQ-sFl"/>
                                                     </constraints>
@@ -527,11 +506,11 @@
             <objects>
                 <viewController id="ibY-De-6PN" customClass="ProfileViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iLJ-9W-cCa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U0-XD-zjW" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="289" y="737.5" width="95" height="29"/>
+                                <rect key="frame" x="289" y="612" width="95" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -548,7 +527,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelfr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-tJ-zct" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="289" y="606" width="95" height="29"/>
+                                <rect key="frame" x="289" y="481" width="95" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -565,7 +544,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-GD-ywL" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="645" width="219.5" height="31"/>
+                                <rect key="frame" x="19.999999999999986" y="520" width="219.66666666666663" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.1308260192" blue="0.24610445929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -582,7 +561,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats and Levels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsU-z9-AyL">
-                                <rect key="frame" x="39" y="525" width="355" height="43"/>
+                                <rect key="frame" x="39" y="400" width="355" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="XVU-a1-rlh"/>
                                 </constraints>
@@ -591,7 +570,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Spanish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="esu-Km-vTI" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="690" width="219.5" height="31"/>
+                                <rect key="frame" x="19.999999999999986" y="565" width="219.66666666666663" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.1308260192" blue="0.24610445929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -608,7 +587,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Score Français" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="01c-41-RV7" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="602" width="220" height="31"/>
+                                <rect key="frame" x="20" y="477" width="220" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.1308260192" blue="0.24610445929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -625,7 +604,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score German" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="wED-nt-Rk8" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="736" width="219.5" height="32"/>
+                                <rect key="frame" x="19.999999999999986" y="611" width="219.66666666666663" height="31"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.1308260192" blue="0.24610445929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -642,7 +621,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjJ-cK-Ifp" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="289" y="645" width="95" height="29"/>
+                                <rect key="frame" x="289" y="520" width="95" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -659,7 +638,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelesp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liS-mr-tYH" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="289" y="691" width="95" height="29"/>
+                                <rect key="frame" x="289" y="566" width="95" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -676,7 +655,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username / email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="8cX-Yc-5B0" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="27" y="464" width="367" height="53"/>
+                                <rect key="frame" x="27" y="338" width="367" height="54"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.1043915102" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -691,7 +670,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dialecto2" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-aP-Zkt" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="97" y="124" width="200" height="302"/>
+                                <rect key="frame" x="97" y="100" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -797,11 +776,11 @@
             <objects>
                 <viewController title="Level Details" id="UJf-zc-eD6" customClass="DetailsViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VIg-aI-Oui">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-XS-pdF" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="602.5" width="145" height="136.5"/>
+                                <rect key="frame" x="20" y="497.66666666666669" width="145" height="115.33333333333331"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -816,7 +795,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGz-v5-pTa" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="193" y="602.5" width="211" height="136.5"/>
+                                <rect key="frame" x="193" y="497.66666666666669" width="211" height="115.33333333333331"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -831,7 +810,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6I-Aj-V1Y" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="11" y="185" width="383" height="56"/>
+                                <rect key="frame" x="11" y="161" width="383" height="56"/>
                                 <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89608546089999996" green="0.73433803320000002" blue="0.44957298759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -843,7 +822,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="MZy-nV-UkY">
-                                <rect key="frame" x="20" y="190" width="117" height="41"/>
+                                <rect key="frame" x="20" y="166" width="117" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="h7Y-im-YIA"/>
                                     <constraint firstAttribute="height" constant="41" id="z5s-ap-BNG"/>
@@ -853,7 +832,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-Qa-s3N">
-                                <rect key="frame" x="239" y="185" width="106" height="46"/>
+                                <rect key="frame" x="239" y="161" width="106" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="qmT-ru-Jxb"/>
                                 </constraints>
@@ -862,7 +841,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-DQ-xIS">
-                                <rect key="frame" x="20" y="294" width="388" height="275.5"/>
+                                <rect key="frame" x="20" y="270" width="388" height="194.66666666666663"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -870,7 +849,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REQUIRED :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="nIZ-qR-kAZ">
-                                <rect key="frame" x="66" y="244" width="186" height="47"/>
+                                <rect key="frame" x="66" y="220" width="186" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="TNs-dR-0Kb"/>
                                 </constraints>
@@ -879,13 +858,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUESTION COUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lmk-us-f0M">
-                                <rect key="frame" x="203" y="611.5" width="191" height="48"/>
+                                <rect key="frame" x="203" y="506.66666666666669" width="191" height="29.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <color key="textColor" red="0.49779788180000001" green="0.47789137050000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DIFFICULTY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-Jg-hGt">
-                                <rect key="frame" x="25" y="608.5" width="135" height="57"/>
+                                <rect key="frame" x="25" y="503.66666666666669" width="135" height="38.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="MuF-cq-r9V"/>
                                 </constraints>
@@ -894,7 +873,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkJ-Lz-iJd">
-                                <rect key="frame" x="77" y="111" width="254" height="66"/>
+                                <rect key="frame" x="77" y="87" width="254" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="jve-DY-Bgd"/>
                                 </constraints>
@@ -905,19 +884,19 @@
                                 <size key="shadowOffset" width="2" height="3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nbr questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-Lg-3u3">
-                                <rect key="frame" x="222" y="681.5" width="153" height="42.5"/>
+                                <rect key="frame" x="222" y="558" width="153" height="40"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.6182763201" blue="0.1917415194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7ka-cx-fFW">
-                                <rect key="frame" x="1" y="685.5" width="154" height="38.5"/>
+                                <rect key="frame" x="1" y="562" width="154" height="36"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.6182763201" blue="0.1917415194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-Zy-o0K" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="203" y="758" width="191" height="35"/>
+                                <rect key="frame" x="203" y="632" width="191" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="191" id="51W-2g-vsK"/>
                                 </constraints>
@@ -956,7 +935,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq7-Kg-mB5" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="758" width="145" height="35"/>
+                                <rect key="frame" x="20" y="632" width="145" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="Hgv-TY-g5X"/>
                                     <constraint firstAttribute="height" constant="35" id="HjU-R5-Lyx"/>
@@ -1070,11 +1049,11 @@
             <objects>
                 <viewController id="hds-pb-0n3" customClass="DetailPrefViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PUi-37-Uid">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-rL-vKp" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="119" width="374" height="757"/>
+                                <rect key="frame" x="20" y="95" width="374" height="621"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -1109,11 +1088,11 @@
             <objects>
                 <viewController storyboardIdentifier="CourStoryBoard" id="6Bx-6J-FXH" customClass="Cours1ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIk-hw-BTw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="leh-4a-szH" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="242" width="358" height="443"/>
+                                <rect key="frame" x="20" y="218" width="358" height="341"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -1125,7 +1104,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Grammaire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="3un-Hp-TT5" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="37" y="129" width="341" height="91.5"/>
+                                <rect key="frame" x="37" y="105" width="341" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="57"/>
                                 <color key="textColor" red="0.92941176469999998" green="0.49803921569999998" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1148,7 +1127,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-aM-sCc" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="78" y="732" width="258" height="71"/>
+                                <rect key="frame" x="78" y="616.66666666666663" width="258" height="60.333333333333371"/>
                                 <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="35"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1188,7 +1167,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yb-yn-zI7">
-                                <rect key="frame" x="37" y="302" width="326" height="342"/>
+                                <rect key="frame" x="37" y="186.66666666666663" width="326" height="342"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1239,17 +1218,17 @@
             <objects>
                 <viewController id="DQ3-RA-6MQ" customClass="cour2ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="87R-4h-J6R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conjugaison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iZ0-e3-3My" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="41" y="109" width="298" height="92"/>
+                                <rect key="frame" x="41" y="85" width="298" height="92"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="57"/>
                                 <color key="textColor" red="0.92941176469999998" green="0.49803921569999998" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVd-SB-Moa" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="97" y="751" width="216" height="36"/>
+                                <rect key="frame" x="97" y="625" width="216" height="36"/>
                                 <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="35"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1289,7 +1268,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-nn-p82" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="16" y="226" width="374" height="482"/>
+                                <rect key="frame" x="16" y="202" width="374" height="380"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -1301,7 +1280,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drR-gx-p4Y">
-                                <rect key="frame" x="20" y="247" width="365" height="434"/>
+                                <rect key="frame" x="20" y="223" width="365" height="332"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1352,10 +1331,10 @@
             <objects>
                 <viewController id="VDD-EF-xmU" customClass="Question1ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jd7-bB-aPe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR QUESTION MUST BE HERE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="3G8-7e-SbA" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YOUR QUESTION MUST BE HERE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="3G8-7e-SbA" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
                                 <rect key="frame" x="27" y="251" width="356" height="137.5"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -1372,31 +1351,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T42-ue-lRk">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T42-ue-lRk">
                                 <rect key="frame" x="50" y="467" width="51" height="31"/>
                                 <connections>
                                     <action selector="action1:" destination="VDD-EF-xmU" eventType="valueChanged" id="C5l-qH-SaW"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-yh-Xm9">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-yh-Xm9">
                                 <rect key="frame" x="314" y="466" width="51" height="31"/>
                                 <connections>
                                     <action selector="action2:" destination="VDD-EF-xmU" eventType="valueChanged" id="HSB-jU-Raz"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rOM-TE-Cz6">
+                            <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rOM-TE-Cz6">
                                 <rect key="frame" x="47" y="603" width="51" height="31"/>
                                 <connections>
                                     <action selector="action3:" destination="VDD-EF-xmU" eventType="valueChanged" id="Ihi-CR-Cyw"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1rQ-2E-kQN">
+                            <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1rQ-2E-kQN">
                                 <rect key="frame" x="297" y="604" width="51" height="31"/>
                                 <connections>
                                     <action selector="action4:" destination="VDD-EF-xmU" eventType="valueChanged" id="8jh-yI-WZ7"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CT2-jW-81C" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contenu2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CT2-jW-81C" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
                                 <rect key="frame" x="256" y="422" width="128" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -1410,7 +1389,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-Zj-VdJ" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contenu3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-Zj-VdJ" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
                                 <rect key="frame" x="23" y="542" width="129" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -1424,7 +1403,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Tk-AF-fL9" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contenu4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Tk-AF-fL9" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
                                 <rect key="frame" x="260" y="542" width="129" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -1438,7 +1417,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-Yx-YYK" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contenu1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-Yx-YYK" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
                                 <rect key="frame" x="30" y="423" width="125" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -1453,7 +1432,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Un-HH-6eY" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="99" y="719" width="216" height="36"/>
+                                <rect key="frame" x="99" y="593" width="216" height="36"/>
                                 <color key="backgroundColor" red="0.49779788180000001" green="0.47789137050000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="USo-XW-GIy"/>
@@ -1472,7 +1451,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="xv8-Ci-Jwz">
-                                <rect key="frame" x="27" y="120" width="104.5" height="38.5"/>
+                                <rect key="frame" x="27.000000000000007" y="96" width="104.66666666666669" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BKA-tw-v5C"/>
                                 </constraints>
@@ -1481,13 +1460,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1234506789" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="3iy-l7-OSe">
-                                <rect key="frame" x="105.5" y="120" width="262.5" height="37.5"/>
+                                <rect key="frame" x="105.66666666666666" y="96" width="262.33333333333337" height="32"/>
                                 <fontDescription key="fontDescription" name="StarJediSpecialEdition" family="StarJedi Special Edition" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.1043915102" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oG-bH-wbz" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="11" y="110" width="392" height="71"/>
+                                <rect key="frame" x="11" y="86" width="392" height="65.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1501,7 +1480,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="xzk-2G-fpQ">
-                                <rect key="frame" x="11" y="183" width="240" height="60"/>
+                                <rect key="frame" x="11" y="153.33333333333334" width="240" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YqW-Hl-y7P"/>
                                 </constraints>
@@ -1510,7 +1489,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_full" translatesAutoresizingMaskIntoConstraints="NO" id="7nt-Mr-acG" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="353" y="183" width="50" height="52"/>
+                                <rect key="frame" x="353" y="153.33333333333334" width="50" height="52"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="pulseDelay">
                                         <real key="value" value="1"/>
@@ -1522,7 +1501,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="sk5-BA-CGp">
-                                <rect key="frame" x="322" y="189" width="28" height="41"/>
+                                <rect key="frame" x="322" y="159.33333333333334" width="28" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="MIG-pt-Zb0"/>
                                     <constraint firstAttribute="height" constant="41" id="NhU-RT-YTm"/>
@@ -1612,11 +1591,11 @@
             <objects>
                 <viewController id="wyW-pO-a0F" customClass="DashboardViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="inZ-A8-TMF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="209" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wcc-gw-KRm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="623"/>
                                 <color key="backgroundColor" red="1" green="0.6182763201" blue="0.1917415194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.6182763201" blue="0.1917415194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -1624,17 +1603,17 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ri9-LU-9Qe" id="yjN-nz-KUy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="208.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="208.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="otW-Q6-KoN">
-                                                    <rect key="frame" x="935" y="18" width="42" height="49"/>
+                                                    <rect key="frame" x="286" y="18" width="42" height="49"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="CGH-ut-kzR">
-                                                    <rect key="frame" x="935" y="108" width="42" height="28"/>
+                                                    <rect key="frame" x="286" y="108" width="42" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="jRp-cQ-upt"/>
                                                     </constraints>
@@ -1643,7 +1622,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nc0-Ew-Gwn">
-                                                    <rect key="frame" x="20" y="19" width="857" height="179"/>
+                                                    <rect key="frame" x="20" y="19" width="208" height="179"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.81366950449999997" blue="0.2500071854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1694,17 +1673,17 @@
             <objects>
                 <viewController id="TM1-HP-k8L" customClass="cour3ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I53-RZ-7C2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orthographe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApT-jg-ukc" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="41" y="109" width="348" height="92"/>
+                                <rect key="frame" x="41" y="85" width="348" height="92"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="57"/>
                                 <color key="textColor" red="0.92941176469999998" green="0.49803921569999998" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Acp-44-SOa" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="24" y="226" width="374" height="482"/>
+                                <rect key="frame" x="24" y="202" width="374" height="380"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -1716,7 +1695,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-Fg-clS" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="99" y="750" width="217" height="36"/>
+                                <rect key="frame" x="99" y="624" width="217" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="ztS-HA-vVl"/>
                                 </constraints>
@@ -1759,7 +1738,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf6-mi-Fbl">
-                                <rect key="frame" x="33" y="246" width="356" height="434"/>
+                                <rect key="frame" x="33" y="222" width="356" height="332"/>
                                 <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1808,11 +1787,11 @@
             <objects>
                 <viewController id="0r2-kZ-2jG" customClass="Type2QuestionViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="07S-bW-2bT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Fd-54-zYI" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="482" width="164" height="156"/>
+                                <rect key="frame" x="20" y="322" width="164" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="IfO-cj-PGF"/>
                                     <constraint firstAttribute="width" constant="164" id="r1B-DR-jtc"/>
@@ -1833,7 +1812,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="43l-G4-lGA" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="655" width="164" height="156"/>
+                                <rect key="frame" x="20" y="495" width="164" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="499-X4-cId"/>
                                 </constraints>
@@ -1853,7 +1832,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-gw-snf" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="230" y="482" width="164" height="156"/>
+                                <rect key="frame" x="230" y="322" width="164" height="156"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
@@ -1870,7 +1849,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zv8-7A-Q1n" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="102" y="840" width="216" height="36"/>
+                                <rect key="frame" x="102" y="680" width="216" height="36"/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.43529411759999997" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="g2H-ra-nfh"/>
@@ -1901,7 +1880,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="XB9-xK-KHW" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="27" y="235" width="360" height="239"/>
+                                <rect key="frame" x="27" y="211" width="360" height="103"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <nil key="highlightedColor"/>
@@ -1921,7 +1900,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_full" translatesAutoresizingMaskIntoConstraints="NO" id="riE-eM-ndA" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="335" y="174" width="50" height="52"/>
+                                <rect key="frame" x="335" y="150" width="50" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="wbd-Y1-aZN"/>
                                 </constraints>
@@ -1933,7 +1912,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-KI-UcJ">
-                                <rect key="frame" x="27" y="120" width="104.5" height="38.5"/>
+                                <rect key="frame" x="27.000000000000007" y="96" width="104.66666666666669" height="38.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104.66666666666666" id="7Sc-DK-Isc"/>
                                     <constraint firstAttribute="height" constant="38.333333333333329" id="pIR-El-g01"/>
@@ -1943,19 +1922,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234506789" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-Yl-zER">
-                                <rect key="frame" x="152.5" y="119.5" width="215.5" height="41"/>
+                                <rect key="frame" x="152.66666666666663" y="95.666666666666671" width="215.33333333333337" height="40.666666666666671"/>
                                 <fontDescription key="fontDescription" name="StarJediSpecialEdition" family="StarJedi Special Edition" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.06974860209" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-UQ-Wp3">
-                                <rect key="frame" x="20" y="148" width="200" height="60"/>
+                                <rect key="frame" x="20" y="124" width="200" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNk-sg-TlI">
-                                <rect key="frame" x="299" y="180" width="28" height="41"/>
+                                <rect key="frame" x="299" y="156" width="28" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="FjG-ea-qCl"/>
                                     <constraint firstAttribute="width" constant="28" id="yxn-3k-MEe"/>
@@ -1965,7 +1944,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6e-8l-zck" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="11" y="110" width="374" height="56.5"/>
+                                <rect key="frame" x="11" y="86" width="374" height="56.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1979,7 +1958,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-or-6lJ" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="230" y="655" width="164" height="156"/>
+                                <rect key="frame" x="230" y="495" width="164" height="156"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
@@ -2064,7 +2043,7 @@
             <objects>
                 <viewController id="oxB-UV-gg5" customClass="Question4ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ida-L8-Mlv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trouver la voix correspondant a l'image suivant:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-TP-9Pn" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
@@ -2187,7 +2166,7 @@
             <objects>
                 <viewController id="TAA-fF-Lc2" customClass="Question5ViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYc-d5-kSi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trouver l'image correspondant aux voix suivant:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-ea-gqA" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
@@ -2331,11 +2310,11 @@
             <objects>
                 <viewController id="LPb-3N-DYE" customClass="Type3QuestionViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZTX-Us-zwS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMN-WA-8nu" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="11" y="118" width="392" height="71"/>
+                                <rect key="frame" x="11" y="94" width="392" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="biM-Qi-cYS"/>
                                 </constraints>
@@ -2352,13 +2331,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="br4-RJ-Q0Y">
-                                <rect key="frame" x="2" y="191" width="240" height="60"/>
+                                <rect key="frame" x="2" y="167" width="240" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_full" translatesAutoresizingMaskIntoConstraints="NO" id="0DG-DW-OYE" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="344" y="191" width="50" height="52"/>
+                                <rect key="frame" x="344" y="167" width="50" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="kI4-Og-qvn"/>
                                     <constraint firstAttribute="width" constant="50" id="ywz-WD-TmF"/>
@@ -2389,7 +2368,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="6gz-Gg-qVa" customClass="UIImageViewX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="71" y="356" width="249" height="141"/>
+                                <rect key="frame" x="71" y="332" width="249" height="39"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="13"/>
@@ -2410,7 +2389,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR QUESTION MUST BE HERE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="kPp-fn-b8t" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="251" width="368" height="97"/>
+                                <rect key="frame" x="20" y="227" width="368" height="97"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="2A4-Ik-nMg"/>
@@ -2449,7 +2428,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="JzU-IC-MNn" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="228" y="535" width="150" height="50"/>
+                                <rect key="frame" x="228" y="409" width="150" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2466,7 +2445,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CXz-3i-u5f" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="629" width="150" height="50"/>
+                                <rect key="frame" x="20" y="503" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4k2-8c-HlF"/>
                                 </constraints>
@@ -2486,7 +2465,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9tI-8N-lQl" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="227" y="629" width="150" height="50"/>
+                                <rect key="frame" x="227" y="503" width="150" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2503,7 +2482,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenu1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="e6j-Hy-az3" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="535" width="150" height="50"/>
+                                <rect key="frame" x="20" y="409" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="N72-Ev-k7k"/>
                                     <constraint firstAttribute="width" constant="150" id="NMg-og-NXa"/>
@@ -2599,11 +2578,11 @@
             <objects>
                 <viewController id="LbW-gh-OT7" customClass="EndLevelViewController" customModule="monMiniProjet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JBE-cI-IsA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="felicitation \ level complete" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="2WF-iT-cdW" customClass="UILabelX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="20" y="219" width="374" height="340"/>
+                                <rect key="frame" x="20" y="195" width="374" height="238"/>
                                 <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2650,12 +2629,10 @@
         <image name="Slice 2" width="30" height="30"/>
         <image name="Slice 3-1" width="64" height="64"/>
         <image name="Slice 5" width="30" height="30"/>
-        <image name="dashboard" width="24" height="24"/>
         <image name="hart1" width="20" height="20"/>
         <image name="heart_emty" width="256" height="256"/>
         <image name="heart_full" width="256" height="256"/>
-        <image name="logo" width="128" height="132"/>
-        <image name="mail" width="602" height="102"/>
+        <image name="loginLayout2" width="375" height="812"/>
         <image name="star1" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
