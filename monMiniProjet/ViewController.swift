@@ -14,7 +14,7 @@ import CoreData
 import Alamofire
 class ViewController: UIViewController ,GIDSignInUIDelegate {
     //"http://172.20.35.112/"
-    static let Ip = "http://172.20.35.112/"
+    static let Ip = "http://172.19.19.85/"
     var url = ViewController.Ip
     
     static var monEmail = ""

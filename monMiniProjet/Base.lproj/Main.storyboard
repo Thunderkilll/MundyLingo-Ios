@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kki-C8-zJq" customClass="UIButtonX" customModule="monMiniProjet" customModuleProvider="target">
-                                <rect key="frame" x="324" y="597" width="70" height="39"/>
+                                <rect key="frame" x="311" y="591" width="70" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="offline">
                                     <color key="titleColor" red="1" green="0.0099468241870000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,20 +103,20 @@
                         <constraints>
                             <constraint firstItem="2pp-mj-wR3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="06s-EF-84T"/>
                             <constraint firstItem="2pp-mj-wR3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7gH-gR-1hB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kki-C8-zJq" secondAttribute="trailing" constant="20" id="7sx-mS-zRN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kki-C8-zJq" secondAttribute="trailing" constant="33" id="7sx-mS-zRN"/>
                             <constraint firstItem="lbQ-Vv-YKk" firstAttribute="leading" secondItem="OQ1-vH-qFq" secondAttribute="trailing" constant="29" id="8BK-Fy-E1n"/>
                             <constraint firstItem="2pp-mj-wR3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cys-B4-X1n"/>
                             <constraint firstItem="lbQ-Vv-YKk" firstAttribute="leading" secondItem="OQ1-vH-qFq" secondAttribute="trailing" constant="29" id="HLH-3P-09Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lbQ-Vv-YKk" secondAttribute="bottom" constant="94" id="J8P-dh-Dl8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kki-C8-zJq" secondAttribute="bottom" constant="100" id="Q5G-5X-iNx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kki-C8-zJq" secondAttribute="bottom" constant="106" id="Q5G-5X-iNx"/>
                             <constraint firstItem="2pp-mj-wR3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wy3-py-WNl"/>
                             <constraint firstItem="lbQ-Vv-YKk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="544" id="XG4-7X-eat"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OQ1-vH-qFq" secondAttribute="bottom" constant="92" id="YSE-gS-FqP"/>
                             <constraint firstItem="OQ1-vH-qFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="546" id="cF9-DF-1C3"/>
-                            <constraint firstItem="Kki-C8-zJq" firstAttribute="leading" secondItem="lbQ-Vv-YKk" secondAttribute="trailing" constant="209" id="jcq-Q4-hiO"/>
+                            <constraint firstItem="Kki-C8-zJq" firstAttribute="leading" secondItem="lbQ-Vv-YKk" secondAttribute="trailing" constant="196" id="jcq-Q4-hiO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pp-mj-wR3" secondAttribute="trailing" id="kWc-th-pnb"/>
                             <constraint firstItem="OQ1-vH-qFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="lk0-Om-kYx"/>
-                            <constraint firstItem="Kki-C8-zJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="533" id="ops-Pa-tqT"/>
+                            <constraint firstItem="Kki-C8-zJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="527" id="ops-Pa-tqT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
