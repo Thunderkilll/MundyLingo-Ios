@@ -53,6 +53,7 @@
 		6E7FC0AD21C044A2006E6E78 /* CourPrefsViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7FC0AC21C044A2006E6E78 /* CourPrefsViewCellViewController.swift */; };
 		6E9C9E1621C845D900D9B2D2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9C9E1521C845D900D9B2D2 /* MainTabBarController.swift */; };
 		6EC7EC9521C07616002CB036 /* DetailPrefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC7EC9421C07616002CB036 /* DetailPrefViewController.swift */; };
+		6EC84CF92201DB2A00895920 /* OfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC84CF82201DB2A00895920 /* OfflineViewController.swift */; };
 		D8FD3D75BF1444B9804BABC4 /* Pods_monMiniProjet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F547BBA249BAFD6E4CC03367 /* Pods_monMiniProjet.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		6E7FC0AC21C044A2006E6E78 /* CourPrefsViewCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourPrefsViewCellViewController.swift; sourceTree = "<group>"; };
 		6E9C9E1521C845D900D9B2D2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6EC7EC9421C07616002CB036 /* DetailPrefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPrefViewController.swift; sourceTree = "<group>"; };
+		6EC84CF82201DB2A00895920 /* OfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewController.swift; sourceTree = "<group>"; };
 		C3E3358860B25D75BD9DFEEA /* Pods-monMiniProjet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monMiniProjet.release.xcconfig"; path = "Pods/Target Support Files/Pods-monMiniProjet/Pods-monMiniProjet.release.xcconfig"; sourceTree = "<group>"; };
 		F547BBA249BAFD6E4CC03367 /* Pods_monMiniProjet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_monMiniProjet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -172,6 +174,7 @@
 				5419BC4F21CB18CA00FFFD84 /* Question4ViewController.swift */,
 				6E3FDE2021CC5D5300128FFD /* EndLevelViewController.swift */,
 				5419BC5321CB5D8A00FFFD84 /* Question5ViewController.swift */,
+				6EC84CF82201DB2A00895920 /* OfflineViewController.swift */,
 				547C643F21938C82003D74E3 /* Main.storyboard */,
 				547C644521938C85003D74E3 /* Assets.xcassets */,
 				547C644721938C85003D74E3 /* LaunchScreen.storyboard */,
@@ -422,6 +425,7 @@
 				54FC5453219FA42F00BEB5E5 /* UIViewX.swift in Sources */,
 				54AACE3421B8554000EB5143 /* secondCollectionViewCell.swift in Sources */,
 				5437661221CC5020007042BC /* Type3QuestionViewController.swift in Sources */,
+				6EC84CF92201DB2A00895920 /* OfflineViewController.swift in Sources */,
 				54C8370F219DAF32003E321A /* DetailsViewController.swift in Sources */,
 				5450F34021AD955A00F3D35D /* DashboardViewController.swift in Sources */,
 				5419BC5021CB18CA00FFFD84 /* Question4ViewController.swift in Sources */,
